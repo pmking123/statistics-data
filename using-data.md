@@ -15,7 +15,14 @@ https://pmking123.github.io/statistics-data/datasets/FILENAME.csv
 ```r
 url <- "https://pmking123.github.io/statistics-data/datasets/FILENAME.csv"
 dat <- read.csv(url)
-head(dat)
+```
+
+or
+
+```r
+library(readr)
+url <- "https://pmking123.github.io/statistics-data/datasets/FILENAME.csv"
+dat <- read_csv(url)
 ```
 
 Save a local copy:

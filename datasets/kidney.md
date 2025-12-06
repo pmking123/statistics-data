@@ -41,7 +41,6 @@ library(readr)
 df <- read_csv("https://pmking123.github.io/statistics-data/datasets/kidney.csv")
 ```
 
-
 ### In Python
 
 ```python

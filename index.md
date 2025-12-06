@@ -53,6 +53,14 @@ url <- "https://pmking123.github.io/statistics-data/datasets/BOD.csv"
 dat <- read.csv(url)
 ```
 
+or
+
+```r
+library(readr)
+url <- "https://pmking123.github.io/statistics-data/datasets/BOD.csv"
+dat <- read_csv(url)
+```
+
 ### Python
 ```python
 import pandas as pd
