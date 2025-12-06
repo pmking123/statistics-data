@@ -1,8 +1,8 @@
 # kidney.csv Codebook
 
-**Filename:** `kidney.csv`  
-**Source:** E. W. Lipkin, S. M. Ott, C. H. Chesnut III and A. Chait, "Mineral Loss in the Parenteral Nutrition Patient", *Am. J. Clin. Nutr.* 47:515-523, 1988.
-**Purpose in course:** Useful for demonstrating regression modeling and data visualization techniques.
+- **Filename:** `kidney.csv`  
+- **Source:** E. W. Lipkin, S. M. Ott, C. H. Chesnut III and A. Chait, "Mineral Loss in the Parenteral Nutrition Patient", *Am. J. Clin. Nutr.* 47:515-523, 1988.
+- **Purpose in course:** Useful for demonstrating regression modeling and data visualization techniques.
 
 ---
 
