@@ -1,10 +1,11 @@
 # statistics-data
 
-This repository hosts datasets used across statistics teaching modules.  
+This repository hosts datasets used across various modules which I teach. They have been gathered from multiple textbooks and resources to provide students with clean, well-documented data for practice and assignments. I apologise in advance for any oversights or errors in attribution; please contact me if you notice any issues.
+
 It provides:
 
 - Clean CSV data files (no embedded comments or metadata)  
-- Matching Markdown **codebooks** documenting each dataset  
+- Matching Markdown **codebooks** documenting each dataset (in progress)
 - Textbook-specific datasets organised into subfolders  
 - A student-friendly GitHub Pages site for easy access:
 
@@ -30,7 +31,12 @@ statistics-data/
 │
 └── textbook_data/            ← Data grouped by textbook
       ├── Barton_Peat/
+      ├── Discovering_Statistics/
+      ├── Getting_Started_with_R/
       ├── Glantz-Slinker/
+      ├── Grafen_and_Hails/
+      ├── Hawkins_Biomeasurement_3e/
+      ├── Hawkins_Biomeasurement_4e/
       ├── OpenIntro/
       ├── Samuels_Witmer/
       └── Samuels_Witmer_4e/

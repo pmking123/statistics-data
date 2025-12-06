@@ -1,7 +1,7 @@
 # leucine_oxidation.csv Codebook
 
 - **Filename:** `leucine_oxidation.csv`  
-- **Source:** Hood, D. A. and Terjung, R. L. (1987) "Effect of Endurance Training on Leucine Metabolism in Peerfused Rat Skeletal Muscle". *Am. J. Physiol.* **253**: E648-656.
+- **Source:** Hood, D. A. and Terjung, R. L. (1987) "Effect of Endurance Training on Leucine Metabolism in Perfused Rat Skeletal Muscle". *Am. J. Physiol.* **253**: E648-656.
 - **Data repository:** [https://pmking123.github.io/statistics-data/datasets/leucine_oxidation.csv](https://pmking123.github.io/statistics-data/datasets/leucine_oxidation.csv)
 
 ---
