@@ -123,8 +123,13 @@ Browse the full folder here:
 
 | Folder | Description |
 |--------|-------------|
-| [`textbook_data/Barton_Peat`](textbook_data/Barton_Peat) | Barton & Peat datasets |
+| [`textbook_data/Barton_Peat`](textbook_data/Barton_Peat) | Barton & Peat |
+| [`textbook_data/Discovering_Statistics`](textbook_data/Discovering_Statistics) | Discovering Statistics|
+| [`textbook_data/Getting_Started_With_R`](textbook_data/Getting_Started_With_R) | Getting Started with R |
 | [`textbook_data/Glantz-Slinker`](textbook_data/Glantz-Slinker) | Glantz & Slinker |
+| [`textbook_data/Grafen_and_Hails`](textbook_data/Grafen_and_Hails) | Grafen & Hails |
+| [`textbook_data/Hawkins_Biomeasurement_3e`](textbook_data/Hawkins_Biomeasurement_3e) | 3rd edition datasets |
+| [`textbook_data/Hawkins_Biomeasurement_4e`](textbook_data/Hawkins_Biomeasurement_4e) | 4th edition datasets |
 | [`textbook_data/OpenIntro`](textbook_data/OpenIntro) | *OpenIntro Statistics* |
 | [`textbook_data/Samuels_Witmer`](textbook_data/Samuels_Witmer) | Samuels & Witmer |
 | [`textbook_data/Samuels_Witmer_4e`](textbook_data/Samuels_Witmer_4e) | 4th edition datasets |
