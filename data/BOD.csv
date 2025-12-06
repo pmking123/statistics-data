@@ -1,0 +1,10 @@
+# Bates, D.M. and Watts, D.G. (1988), Nonlinear Regression Analysis and Its Applications, Wiley, Appendix A1.4.
+# Originally from Marske (1967), Biochemical Oxygen Demand Data Interpretation Using Sum of Squares Surface M.Sc. Thesis, University of Wisconsin – Madison.
+
+"Time","demand"
+1,8.3
+2,10.3
+3,19
+4,16
+5,15.6
+7,19.8

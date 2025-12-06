@@ -1,0 +1,23 @@
+---
+title: "1-1.Rmd"
+author: "Dr Paul King"
+date: "12 June 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+```{r}
+mydata <- read.csv("1-1.csv")
+plot(mydata$Height,mydata$Weight, xlab = "Height / cm", ylab = "Weight / g", pch = 19, las = 1)
+mydata.lm1 <- lm(Weight ~ Height, data = mydata)
+abline(mydata.lm1)
+```
+
+```{r}
+ggplot(mydata, aes(x = Height, y = Weight)) + geom_point(shape=19) 	+ stat_smooth(method = lm, level = 0.95) + xlab("Height / cm") + ylab("Weight / g") 
+```
+
