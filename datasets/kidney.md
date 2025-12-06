@@ -1,8 +1,8 @@
 # kidney.csv Codebook
 
 **Filename:** `kidney.csv`  
-**Source:** _Add source here (e.g. textbook, study, simulation)_  
-**Purpose in course:** _Briefly describe how this dataset is used in teaching (e.g. simple regression, ANOVA, logistic regression, time series, etc.)._
+**Source:** E. W. Lipkin, S. M. Ott, C. H. Chesnut III and A. Chait, "Mineral Loss in the Parenteral Nutrition Patient", *Am. J. Clin. Nutr.* 47:515-523, 1988.
+**Purpose in course:** Useful for demonstrating regression modeling and data visualization techniques.
 
 ---
 
@@ -12,15 +12,17 @@ Fill in one row per column in `kidney.csv`.
 
 | Variable | Type (numeric / factor / character / date) | Units | Description |
 |---------|---------------------------------------------|-------|-------------|
-| `...`   |                                             |       |             |
+| `uca`   |      numeric            |   mg / 12 h    |      Urinary Ca^2+^ |
+| `dca`   |      numeric            |   mg / 12 h    |      Dietary Ca^2+^ |
+|`gfr`    |      numeric            |   mL / min   |      Glomerular filtration rate |
+|`una`   |      numeric            |   mEq / 12 h    |      Urinary Na^+^ |
+|`dp`|   |      numeric            |   g / day    |      Dietary protein |
 
 ---
 
 ## Notes
 
-- Missing value coding: _e.g. `NA`, `.` or special codes_
-- Any data quirks (outliers, truncation, rounding, etc.)
-- If data are paired / repeated measures / longitudinal, explain the structure.
+None
 
 ---
 
@@ -29,12 +31,20 @@ Fill in one row per column in `kidney.csv`.
 ### In R
 
 ```r
-df <- read.csv("kidney.csv", header = TRUE)
+df <- read.csv("https://pmking123.github.io/statistics-data/datasets/kidney.csv", header = TRUE)
 ```
+
+or
+
+```r
+library(readr)
+df <- read_csv("https://pmking123.github.io/statistics-data/datasets/kidney.csv")
+```
+
 
 ### In Python
 
 ```python
 import pandas as pd
-df = pd.read_csv("kidney.csv")
+df = pd.read_csv("https://pmking123.github.io/statistics-data/datasets/kidney.csv")
 ```
