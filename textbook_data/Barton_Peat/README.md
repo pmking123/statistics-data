@@ -16,3 +16,7 @@ Add a row here for each file in this folder.
 
 - Describe the overall theme of these datasets (e.g. which textbook / chapter they come from).
 - If there is a separate solutions manual or exercises referring to these data, mention that here.
+
+## Dataset Index
+
+_No .csv files found in this folder._

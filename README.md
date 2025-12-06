@@ -90,3 +90,5 @@ Inside `tools/`:
 ## 📄 License
 
 These datasets are provided for educational purposes only.
+
+Please attribute the original sources where applicable.

@@ -107,13 +107,12 @@ These datasets are stored as clean CSVs and include a matching codebook.
 | two-way-regression dataset | [`two-way-regression.csv`](datasets/two-way-regression.csv) | [`two-way-regression.md`](datasets/two-way-regression.md) |
 | type1 dataset | [`type1.csv`](datasets/type1.csv) | [`type1.md`](datasets/type1.md) |
 | ukwcs_regression dataset | [`ukwcs_regression.csv`](datasets/ukwcs_regression.csv) | [`ukwcs_regression.md`](datasets/ukwcs_regression.md) |
-| ukwcs_regression_diet dataset | [`ukwcs_regression_diet.csv`](datasets/ukwcs_regression_diet.csv) | [`ukwcs_regression_diet.md`](datasets/ukwcs_regression_diet.md) |
+| ukwcs_regression_diet dataset | [`ukwcs_regression_diet.csv`](datasets/ukwcs_regression_diet.csv) | [`ukwcs_regression_diet.md`](datasets/ukwcs_regression_diet.md) |        
 | water dataset | [`water.csv`](datasets/water.csv) | [`water.md`](datasets/water.md) |
 | WeightLoss dataset | [`WeightLoss.csv`](datasets/WeightLoss.csv) | [`WeightLoss.md`](datasets/WeightLoss.md) |
 | whr dataset | [`whr.csv`](datasets/whr.csv) | [`whr.md`](datasets/whr.md) |
 | women dataset | [`women.csv`](datasets/women.csv) | [`women.md`](datasets/women.md) |
 | womensrole dataset | [`womensrole.csv`](datasets/womensrole.csv) | [`womensrole.md`](datasets/womensrole.md) |
-
 
 Browse the full folder here:  
 👉 [`datasets/`](datasets/)
