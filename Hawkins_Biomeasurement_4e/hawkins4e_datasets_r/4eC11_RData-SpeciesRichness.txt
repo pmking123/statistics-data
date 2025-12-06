@@ -1,0 +1,7 @@
+reserve	area	richness
+Mole    	4840	22
+Digya   	3126	14
+Bui     	2074	17
+Gbele   	565	10
+Kalakpa 	325	12
+Shai    	58	5
