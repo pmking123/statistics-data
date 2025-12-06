@@ -8,11 +8,17 @@ Each dataset has a matching **Markdown codebook** describing variables, units, a
 
 ## 📚 How the documentation is organised
 
+- Miscellaneous datasets are contained in the `datasets/` folder.
 - For each dataset file like `BOD.csv` there is a corresponding codebook, e.g. `BOD.md`.
 - Codebooks live alongside the data files in the same folder.
-- Textbook-specific datasets are stored in subfolders:
+- Textbook-specific datasets are stored in the `textbook_data/` folder, in various subfolders:
   - `Barton_Peat/`
+  - `Discovering_Statistics/`
+  - `Getting_Started_in_Statistics/`
   - `Glantz-Slinker/`
+  - `Grafen_and_Hails/`
+  - `Hawkins_Biomeasurement_3e/`
+  - `Hawkins_Biomeasurement_4e/`
   - `OpenIntro/`
   - `Samuels_Witmer/`
   - `Samuels_Witmer_4e/`
@@ -146,19 +152,6 @@ These are “textbook classics” often used to illustrate basic statistical ide
 
 ---
 
-## 📂 Textbook collections
-
-These folders contain multiple datasets from specific textbooks. Each folder has its own `README.md`:
-
-- `Barton_Peat/` → `Barton_Peat/README.md`
-- `Glantz-Slinker/` → `Glantz-Slinker/README.md`
-- `OpenIntro/` → `OpenIntro/README.md`
-- `Samuels_Witmer/` → `Samuels_Witmer/README.md`
-- `Samuels_Witmer_4e/` → `Samuels_Witmer_4e/README.md`
-
-Within each folder, you can add per-dataset codebooks as needed (e.g. `Barton_Peat/asthma.md`).
-
----
 
 ## 💻 Loading data
 
