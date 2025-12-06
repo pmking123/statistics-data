@@ -1,4 +1,4 @@
-"""Helper script to generate Markdown tables of datasets.
+"""Helper script to generate Markdown tables of datasets and data files.
 
 Run this from the root of the repository (where the `datasets/` and
 `textbook_data/` folders live):
@@ -6,76 +6,117 @@ Run this from the root of the repository (where the `datasets/` and
     python tools/make_dataset_table.py
 
 It will:
-- scan the `datasets/` folder and print a Markdown table with CSV + codebook links
+- scan the `datasets/` folder and print a Markdown table with data file + codebook links
   (you can paste this into index.md or README.md if you like)
-- scan each subfolder of `textbook_data/` and update its README.md:
+- recursively scan ALL subfolders of `textbook_data/` and update their README.md:
   * it will REPLACE any existing '## Dataset Index' section
-  * or APPEND a new '## Dataset Index' section at the end if none exists
+  * or APPEND a new '## Dataset Index' section if none exists
 """
 
 from pathlib import Path
 import re
 import sys
 
+# ----------------------------------------------------------
+# File types to index
+# ----------------------------------------------------------
 
+# Case-insensitive suffixes we treat as "data files"
+INDEXED_SUFFIXES = {
+    ".csv",
+    ".xlsx",
+    ".xpt",
+    ".sav",
+    ".txt",
+    ".rdata",
+    ".rds",
+    ".json",
+    ".tsv",
+}
+
+# Filenames we want to skip (temp/junk files etc.)
+IGNORE_PREFIXES = (".", "~")  # e.g. .DS_Store, .gitignore, ~$foo.xlsx
+IGNORE_SUFFIXES = ("~", ".bak", ".tmp")
+
+
+def is_indexed(p: Path) -> bool:
+    """Return True if the file should be included in the index."""
+    if not p.is_file():
+        return False
+    name = p.name
+    # ignore obvious junk
+    if name.startswith(IGNORE_PREFIXES) or name.endswith(IGNORE_SUFFIXES):
+        return False
+    return p.suffix.lower() in INDEXED_SUFFIXES
+
+
+# ----------------------------------------------------------
+# Root dataset table
+# ----------------------------------------------------------
 def make_table_for_root_datasets(datasets_dir: Path) -> str:
-    """Make a Markdown table for all .csv files in datasets/ (for the main index)."""
     rows = []
-    for p in sorted(datasets_dir.iterdir()):
-        if p.suffix.lower() == ".csv":
+    for p in sorted(datasets_dir.iterdir(), key=lambda x: x.name.lower()):
+        if is_indexed(p):
             stem = p.stem
-            csv_link = f"datasets/{p.name}"
+            data_link = f"datasets/{p.name}"
+
+            # Codebook logic: only .md with matching stem
             md_name = f"{stem}.md"
             md_path = datasets_dir / md_name
             if md_path.exists():
                 md_link = f"datasets/{md_name}"
             else:
-                md_link = md_name + " (not yet created)"
-            desc = f"{stem} dataset"
+                md_link = f"{md_name} (not yet created)"
+
+            desc = f"{stem} file"
             rows.append(
-                f"| {desc} | [`{p.name}`]({csv_link}) | [`{md_name}`]({md_link}) |"
+                f"| {desc} | [`{p.name}`]({data_link}) | [`{md_name}`]({md_link}) |"
             )
 
     if not rows:
-        return "_No .csv files found in datasets/._"
+        return "_No dataset files found in datasets/._"
 
-    header = "| Dataset | CSV | Codebook |\n|---------|-----|----------|"
+    header = "| File | Data | Codebook |\n|------|------|----------|"
     return header + "\n" + "\n".join(rows)
 
 
+# ----------------------------------------------------------
+# Subdirectory tables (textbook_data and deeper)
+# ----------------------------------------------------------
 def make_table_for_subdir(subdir: Path) -> str:
-    """Make a Markdown table for .csv files in a textbook subfolder.
-
-    Links are relative to that folder (e.g. `asthma.csv`, `asthma.md`).
-    """
     rows = []
-    for p in sorted(subdir.iterdir()):
-        if p.suffix.lower() == ".csv":
+    for p in sorted(subdir.iterdir(), key=lambda x: x.name.lower()):
+        if is_indexed(p):
             stem = p.stem
-            csv_link = p.name
+            data_link = p.name          # local relative link
+
             md_name = f"{stem}.md"
             md_path = subdir / md_name
             if md_path.exists():
-                md_link = md_name
+                md_link = md_name       # local relative
             else:
-                md_link = md_name + " (not yet created)"
-            desc = f"{stem} dataset"
+                md_link = f"{md_name} (not yet created)"
+
+            desc = f"{stem} file"
             rows.append(
-                f"| {desc} | [`{p.name}`]({csv_link}) | [`{md_name}`]({md_link}) |"
+                f"| {desc} | [`{p.name}`]({data_link}) | [`{md_name}`]({md_link}) |"
             )
 
     if not rows:
-        return "_No .csv files found in this folder._"
+        return "_No dataset files found in this folder._"
 
-    header = "| Dataset | CSV | Codebook |\n|---------|-----|----------|"
+    header = "| File | Data | Codebook |\n|------|------|----------|"
     return header + "\n" + "\n".join(rows)
 
 
+# ----------------------------------------------------------
+# README updater (Option B logic)
+# ----------------------------------------------------------
 def update_readme_with_index(readme_text: str, table: str) -> str:
-    """Replace or append a '## Dataset Index' section in a README.md (Option B).
+    """Replace or append a '## Dataset Index' section in README.md.
 
     - If '## Dataset Index' exists, everything from that heading up to the next
-      heading ('# ' or '## ') is replaced with the new section.
+      top-level or second-level heading ('# ' or '## ') is replaced with the new section.
     - If it does not exist, the section is appended at the end.
     """
     section = "\n## Dataset Index\n\n" + table + "\n"
@@ -95,8 +136,8 @@ def update_readme_with_index(readme_text: str, table: str) -> str:
     after_heading_pos = m.end()
     rest = readme_text[after_heading_pos:]
 
-    # Find next heading (level 1 or 2) after '## Dataset Index'
-    next_heading_re = re.compile(r"^# ", re.M)  # matches '# ' OR '## ' etc.
+    # Find next heading after this one
+    next_heading_re = re.compile(r"^# ", re.M)
     m2 = next_heading_re.search(rest)
     if m2:
         end = after_heading_pos + m2.start()
@@ -107,45 +148,46 @@ def update_readme_with_index(readme_text: str, table: str) -> str:
     after = readme_text[end:]
     if not before.endswith("\n"):
         before += "\n"
-    # Keep a blank line between the previous content and the new section
+
     return before + section + after
 
 
+# ----------------------------------------------------------
+# Main script
+# ----------------------------------------------------------
 if __name__ == "__main__":
     repo_root = Path(".")
 
-    # ---- 1. Print table for datasets/ (stdout, for use in index.md etc.) ----
+    # ---- 1. Datasets root table (stdout) ----
     datasets_dir = repo_root / "datasets"
-    if not datasets_dir.exists():
-        raise SystemExit("datasets/ folder not found. Run from the repo root.")
-
-    table_root = make_table_for_root_datasets(datasets_dir)
     print("# Datasets (datasets/)\n")
-    print(table_root)
+    if not datasets_dir.exists():
+        print("_No datasets/ folder found._")
+    else:
+        print(make_table_for_root_datasets(datasets_dir))
     print()
 
-    # ---- 2. Update textbook_data/*/README.md files in-place ----
+    # ---- 2. Traverse textbook_data/ recursively ----
     textbook_root = repo_root / "textbook_data"
     if not textbook_root.exists():
         print("No textbook_data/ folder found – skipping textbook READMEs.", file=sys.stderr)
-        raise SystemExit(0)
+        sys.exit(0)
 
-    for subdir in sorted(textbook_root.iterdir()):
+    for subdir in sorted(textbook_root.rglob("*"), key=lambda x: str(x).lower()):
         if not subdir.is_dir():
+            continue
+        if subdir == textbook_root:
             continue
 
         readme_path = subdir / "README.md"
-        if not readme_path.exists():
-            # If you prefer to skip folders without README, uncomment next line:
-            # print(f"Skipping {subdir} (no README.md found)", file=sys.stderr)
-            # continue
-            # Or create a basic README:
-            base_title = f"# {subdir.name} datasets\n\n"
-            readme_text = base_title
-        else:
+        if readme_path.exists():
             readme_text = readme_path.read_text(encoding="utf-8")
+        else:
+            title = subdir.name.replace("_", " ")
+            readme_text = f"# {title} datasets\n\n"
 
         table = make_table_for_subdir(subdir)
         updated = update_readme_with_index(readme_text, table)
         readme_path.write_text(updated, encoding="utf-8")
+
         print(f"Updated dataset index in {readme_path}", file=sys.stderr)
