@@ -1,5 +1,7 @@
 # Getting_Started_With_R datasets
 
+Datasets for "Getting Started with R: An Introduction for Biologists" by Andrew P. Beckerman, Owen L. Petchey, and Valesca de Oliveira (2017, Oxford University Press).
+
 ## Dataset Index
 
 | File | Data | Codebook |

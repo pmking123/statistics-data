@@ -1,6 +1,5 @@
 # hawkins4e datasets SPSS24 datasets
 
-
 ## Dataset Index
 
 | File | Data | Codebook |

@@ -1,6 +1,5 @@
 # datasets R datasets
 
-
 ## Dataset Index
 
 | File | Data | Codebook |

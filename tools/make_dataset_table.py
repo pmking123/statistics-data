@@ -31,6 +31,7 @@ INDEXED_SUFFIXES = {
     ".rdata",
     ".rds",
     ".json",
+    ".dat",
     ".tsv",
 }
 

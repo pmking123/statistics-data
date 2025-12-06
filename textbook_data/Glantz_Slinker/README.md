@@ -1,30 +1,124 @@
 # Glantz-Slinker datasets
 
-This folder contains datasets associated with **Glantz-Slinker**.
-
-Use this file to document each dataset in the folder.
-
-## Files
-
-Add a row here for each file in this folder.
-
-| File | Description | Codebook (if separate) |
-|------|-------------|------------------------|
-| `example.csv` | _Short description_ | `example.md` |
-
-## Notes
-
-- Describe the overall theme of these datasets (e.g. which textbook / chapter they come from).
-- If there is a separate solutions manual or exercises referring to these data, mention that here.
+This folder contains datasets associated with "Primer of Applied Regression & Analysis of Variance" by Sidney Glantz and B. K. Slinker (1990, McGraw-Hill).
 
 ## Dataset Index
 
 | File | Data | Codebook |
 |------|------|----------|
 | 1-1 file | [`1-1.csv`](1-1.csv) | [`1-1.md`](1-1.md (not yet created)) |
+| 2-1 file | [`2-1.dat`](2-1.dat) | [`2-1.md`](2-1.md (not yet created)) |
+| 3-1 file | [`3-1.dat`](3-1.dat) | [`3-1.md`](3-1.md (not yet created)) |
+| 5-2 file | [`5-2.dat`](5-2.dat) | [`5-2.md`](5-2.md (not yet created)) |
+| 5-4 file | [`5-4.dat`](5-4.dat) | [`5-4.md`](5-4.md (not yet created)) |
+| 7-1 file | [`7-1.dat`](7-1.dat) | [`7-1.md`](7-1.md (not yet created)) |
+| 7-5 file | [`7-5.dat`](7-5.dat) | [`7-5.md`](7-5.md (not yet created)) |
+| 8-12 file | [`8-12.dat`](8-12.dat) | [`8-12.md`](8-12.md (not yet created)) |
+| 8-15 file | [`8-15.dat`](8-15.dat) | [`8-15.md`](8-15.md (not yet created)) |
+| 8-17 file | [`8-17.dat`](8-17.dat) | [`8-17.md`](8-17.md (not yet created)) |
+| 8-2 file | [`8-2.dat`](8-2.dat) | [`8-2.md`](8-2.md (not yet created)) |
+| 9-1 file | [`9-1.dat`](9-1.dat) | [`9-1.md`](9-1.md (not yet created)) |
+| 9-12 file | [`9-12.dat`](9-12.dat) | [`9-12.md`](9-12.md (not yet created)) |
+| 9-15 file | [`9-15.dat`](9-15.dat) | [`9-15.md`](9-15.md (not yet created)) |
+| 9-17 file | [`9-17.dat`](9-17.dat) | [`9-17.md`](9-17.md (not yet created)) |
+| 9-2 file | [`9-2.dat`](9-2.dat) | [`9-2.md`](9-2.md (not yet created)) |
+| 9-4 file | [`9-4.dat`](9-4.dat) | [`9-4.md`](9-4.md (not yet created)) |
+| 9-4_missing file | [`9-4_missing.dat`](9-4_missing.dat) | [`9-4_missing.md`](9-4_missing.md (not yet created)) |
+| 9-8 file | [`9-8.dat`](9-8.dat) | [`9-8.md`](9-8.md (not yet created)) |
+| C-1 file | [`C-1.dat`](C-1.dat) | [`C-1.md`](C-1.md (not yet created)) |
+| C-10 file | [`C-10.dat`](C-10.dat) | [`C-10.md`](C-10.md (not yet created)) |
+| C-11 file | [`C-11.dat`](C-11.dat) | [`C-11.md`](C-11.md (not yet created)) |
+| C-12A file | [`C-12A.dat`](C-12A.dat) | [`C-12A.md`](C-12A.md (not yet created)) |
+| C-12B file | [`C-12B.dat`](C-12B.dat) | [`C-12B.md`](C-12B.md (not yet created)) |
+| C-13 file | [`C-13.dat`](C-13.dat) | [`C-13.md`](C-13.md (not yet created)) |
+| C-14 file | [`C-14.dat`](C-14.dat) | [`C-14.md`](C-14.md (not yet created)) |
+| C-15 file | [`C-15.dat`](C-15.dat) | [`C-15.md`](C-15.md (not yet created)) |
+| C-16 file | [`C-16.dat`](C-16.dat) | [`C-16.md`](C-16.md (not yet created)) |
+| C-17 file | [`C-17.dat`](C-17.dat) | [`C-17.md`](C-17.md (not yet created)) |
+| C-18 file | [`C-18.dat`](C-18.dat) | [`C-18.md`](C-18.md (not yet created)) |
+| C-19 file | [`C-19.dat`](C-19.dat) | [`C-19.md`](C-19.md (not yet created)) |
+| C-2 file | [`C-2.dat`](C-2.dat) | [`C-2.md`](C-2.md (not yet created)) |
+| C-20 file | [`C-20.dat`](C-20.dat) | [`C-20.md`](C-20.md (not yet created)) |
+| C-21 file | [`C-21.dat`](C-21.dat) | [`C-21.md`](C-21.md (not yet created)) |
 | C-22 file | [`C-22.csv`](C-22.csv) | [`C-22.md`](C-22.md (not yet created)) |
+| C-22 file | [`C-22.dat`](C-22.dat) | [`C-22.md`](C-22.md (not yet created)) |
+| C-23 file | [`C-23.dat`](C-23.dat) | [`C-23.md`](C-23.md (not yet created)) |
 | C-24 file | [`C-24.csv`](C-24.csv) | [`C-24.md`](C-24.md (not yet created)) |
+| C-24 file | [`C-24.dat`](C-24.dat) | [`C-24.md`](C-24.md (not yet created)) |
+| C-3 file | [`C-3.dat`](C-3.dat) | [`C-3.md`](C-3.md (not yet created)) |
+| C-4 file | [`C-4.dat`](C-4.dat) | [`C-4.md`](C-4.md (not yet created)) |
+| C-5 file | [`C-5.dat`](C-5.dat) | [`C-5.md`](C-5.md (not yet created)) |
+| C-6 file | [`C-6.dat`](C-6.dat) | [`C-6.md`](C-6.md (not yet created)) |
+| C-7 file | [`C-7.dat`](C-7.dat) | [`C-7.md`](C-7.md (not yet created)) |
+| C-8A file | [`C-8A.dat`](C-8A.dat) | [`C-8A.md`](C-8A.md (not yet created)) |
+| C-8B file | [`C-8B.dat`](C-8B.dat) | [`C-8B.md`](C-8B.md (not yet created)) |
+| C-8C file | [`C-8C.dat`](C-8C.dat) | [`C-8C.md`](C-8C.md (not yet created)) |
+| C-8D file | [`C-8D.dat`](C-8D.dat) | [`C-8D.md`](C-8D.md (not yet created)) |
+| C-8E file | [`C-8E.dat`](C-8E.dat) | [`C-8E.md`](C-8E.md (not yet created)) |
+| C-9 file | [`C-9.dat`](C-9.dat) | [`C-9.md`](C-9.md (not yet created)) |
 | C1 file | [`C1.csv`](C1.csv) | [`C1.md`](C1.md (not yet created)) |
 | C2 file | [`C2.csv`](C2.csv) | [`C2.md`](C2.md (not yet created)) |
 | C3 file | [`C3.csv`](C3.csv) | [`C3.md`](C3.md (not yet created)) |
+| center file | [`center.dat`](center.dat) | [`center.md`](center.md (not yet created)) |
+| D-1 file | [`D-1.dat`](D-1.dat) | [`D-1.md`](D-1.md (not yet created)) |
+| D-10 file | [`D-10.dat`](D-10.dat) | [`D-10.md`](D-10.md (not yet created)) |
+| D-11 file | [`D-11.dat`](D-11.dat) | [`D-11.md`](D-11.md (not yet created)) |
+| D-12 file | [`D-12.dat`](D-12.dat) | [`D-12.md`](D-12.md (not yet created)) |
+| D-13 file | [`D-13.dat`](D-13.dat) | [`D-13.md`](D-13.md (not yet created)) |
+| D-14 file | [`D-14.dat`](D-14.dat) | [`D-14.md`](D-14.md (not yet created)) |
+| D-15 file | [`D-15.dat`](D-15.dat) | [`D-15.md`](D-15.md (not yet created)) |
+| D-16 file | [`D-16.dat`](D-16.dat) | [`D-16.md`](D-16.md (not yet created)) |
+| D-17 file | [`D-17.dat`](D-17.dat) | [`D-17.md`](D-17.md (not yet created)) |
+| D-18 file | [`D-18.dat`](D-18.dat) | [`D-18.md`](D-18.md (not yet created)) |
+| D-19 file | [`D-19.dat`](D-19.dat) | [`D-19.md`](D-19.md (not yet created)) |
+| D-2 file | [`D-2.dat`](D-2.dat) | [`D-2.md`](D-2.md (not yet created)) |
+| D-20 file | [`D-20.dat`](D-20.dat) | [`D-20.md`](D-20.md (not yet created)) |
+| D-21 file | [`D-21.dat`](D-21.dat) | [`D-21.md`](D-21.md (not yet created)) |
+| D-22 file | [`D-22.dat`](D-22.dat) | [`D-22.md`](D-22.md (not yet created)) |
+| D-23 file | [`D-23.dat`](D-23.dat) | [`D-23.md`](D-23.md (not yet created)) |
+| D-24 file | [`D-24.dat`](D-24.dat) | [`D-24.md`](D-24.md (not yet created)) |
+| D-25 file | [`D-25.dat`](D-25.dat) | [`D-25.md`](D-25.md (not yet created)) |
+| D-26 file | [`D-26.dat`](D-26.dat) | [`D-26.md`](D-26.md (not yet created)) |
+| D-27 file | [`D-27.dat`](D-27.dat) | [`D-27.md`](D-27.md (not yet created)) |
+| D-28 file | [`D-28.dat`](D-28.dat) | [`D-28.md`](D-28.md (not yet created)) |
+| D-29 file | [`D-29.dat`](D-29.dat) | [`D-29.md`](D-29.md (not yet created)) |
+| D-3 file | [`D-3.dat`](D-3.dat) | [`D-3.md`](D-3.md (not yet created)) |
+| D-30 file | [`D-30.dat`](D-30.dat) | [`D-30.md`](D-30.md (not yet created)) |
+| D-31 file | [`D-31.dat`](D-31.dat) | [`D-31.md`](D-31.md (not yet created)) |
+| D-32 file | [`D-32.dat`](D-32.dat) | [`D-32.md`](D-32.md (not yet created)) |
+| D-33 file | [`D-33.dat`](D-33.dat) | [`D-33.md`](D-33.md (not yet created)) |
+| D-34 file | [`D-34.dat`](D-34.dat) | [`D-34.md`](D-34.md (not yet created)) |
+| D-35 file | [`D-35.dat`](D-35.dat) | [`D-35.md`](D-35.md (not yet created)) |
+| D-36 file | [`D-36.dat`](D-36.dat) | [`D-36.md`](D-36.md (not yet created)) |
+| D-37 file | [`D-37.dat`](D-37.dat) | [`D-37.md`](D-37.md (not yet created)) |
+| D-38 file | [`D-38.dat`](D-38.dat) | [`D-38.md`](D-38.md (not yet created)) |
+| D-39 file | [`D-39.dat`](D-39.dat) | [`D-39.md`](D-39.md (not yet created)) |
+| D-4 file | [`D-4.dat`](D-4.dat) | [`D-4.md`](D-4.md (not yet created)) |
+| D-40 file | [`D-40.dat`](D-40.dat) | [`D-40.md`](D-40.md (not yet created)) |
+| D-41 file | [`D-41.dat`](D-41.dat) | [`D-41.md`](D-41.md (not yet created)) |
+| D-42 file | [`D-42.dat`](D-42.dat) | [`D-42.md`](D-42.md (not yet created)) |
+| D-43 file | [`D-43.dat`](D-43.dat) | [`D-43.md`](D-43.md (not yet created)) |
+| D-5 file | [`D-5.dat`](D-5.dat) | [`D-5.md`](D-5.md (not yet created)) |
+| D-6 file | [`D-6.dat`](D-6.dat) | [`D-6.md`](D-6.md (not yet created)) |
+| D-7 file | [`D-7.dat`](D-7.dat) | [`D-7.md`](D-7.md (not yet created)) |
+| D-8 file | [`D-8.dat`](D-8.dat) | [`D-8.md`](D-8.md (not yet created)) |
+| D-9 file | [`D-9.dat`](D-9.dat) | [`D-9.md`](D-9.md (not yet created)) |
+| depress file | [`depress.dat`](depress.dat) | [`depress.md`](depress.md (not yet created)) |
+| drinkagg file | [`drinkagg.dat`](drinkagg.dat) | [`drinkagg.md`](drinkagg.md (not yet created)) |
+| drinkagm file | [`drinkagm.dat`](drinkagm.dat) | [`drinkagm.md`](drinkagm.md (not yet created)) |
+| eating file | [`eating.dat`](eating.dat) | [`eating.md`](eating.md (not yet created)) |
+| eatmis file | [`eatmis.dat`](eatmis.dat) | [`eatmis.md`](eatmis.md (not yet created)) |
+| gender file | [`gender.dat`](gender.dat) | [`gender.md`](gender.md (not yet created)) |
+| gum file | [`gum.dat`](gum.dat) | [`gum.md`](gum.md (not yet created)) |
+| gummis file | [`gummis.dat`](gummis.dat) | [`gummis.md`](gummis.md (not yet created)) |
+| kidmiscl file | [`kidmiscl.dat`](kidmiscl.dat) | [`kidmiscl.md`](kidmiscl.md (not yet created)) |
+| kidney file | [`kidney.dat`](kidney.dat) | [`kidney.md`](kidney.md (not yet created)) |
+| kidnymis file | [`kidnymis.dat`](kidnymis.dat) | [`kidnymis.md`](kidnymis.md (not yet created)) |
+| mars2whw file | [`mars2whw.dat`](mars2whw.dat) | [`mars2whw.md`](mars2whw.md (not yet created)) |
+| marssick file | [`marssick.dat`](marssick.dat) | [`marssick.md`](marssick.md (not yet created)) |
+| marssmok file | [`marssmok.dat`](marssmok.dat) | [`marssmok.md`](marssmok.md (not yet created)) |
+| marswh file | [`marswh.dat`](marswh.dat) | [`marswh.md`](marswh.md (not yet created)) |
 | marswhw file | [`marswhw.csv`](marswhw.csv) | [`marswhw.md`](marswhw.md (not yet created)) |
+| marswhw file | [`marswhw.dat`](marswhw.dat) | [`marswhw.md`](marswhw.md (not yet created)) |
+| volfake file | [`volfake.dat`](volfake.dat) | [`volfake.md`](volfake.md (not yet created)) |
+| volume file | [`volume.dat`](volume.dat) | [`volume.md`](volume.md (not yet created)) |
