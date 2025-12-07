@@ -1,2 +1,44 @@
-# Normalize text files to LF in the repo
-* text=auto
+###############################################################################
+# Normalise all text files to LF in the repo, regardless of OS.
+###############################################################################
+* text eol=lf
+
+###############################################################################
+# CSV, TSV, TXT, JSON — always text with LF endings.
+###############################################################################
+*.csv  text eol=lf
+*.tsv  text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+
+###############################################################################
+# Markdown — keep LF line endings for consistent diffs and Pages rendering.
+###############################################################################
+*.md   text eol=lf
+
+###############################################################################
+# Code files (scripts, notebooks metadata files)
+###############################################################################
+*.py   text eol=lf
+*.r    text eol=lf
+*.R    text eol=lf
+*.Rmd  text eol=lf
+*.ipynb text
+
+###############################################################################
+# Binary data formats — Git must NOT mess with line endings.
+###############################################################################
+*.sav  binary
+*.xpt  binary
+*.dta  binary
+*.xlsx binary
+*.RData binary
+*.rds binary
+*.zip  binary
+*.gz   binary
+
+###############################################################################
+# Ensure GitHub Linguist treats dataset directories as data, not code.
+###############################################################################
+datasets/* linguist-generated=true
+textbook_data/* linguist-generated=true
