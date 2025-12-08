@@ -15,6 +15,7 @@ It provides:
 
 ## 📚 Repository structure
 
+```
 statistics-data/
 │
 ├── README.md                 ← This file (for GitHub users)
@@ -39,7 +40,7 @@ statistics-data/
       ├── OpenIntro/
       ├── Samuels_Witmer/
       └── Samuels_Witmer_4e/
-
+```
 
 All datasets in `datasets/` are directly accessible via short URLs such as:
 
