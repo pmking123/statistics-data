@@ -1,8 +1,8 @@
 # ToothGrowth.csv Codebook
 
 **Filename:** `ToothGrowth.csv`  
-**Source:** _Add source here (e.g. textbook, study, simulation)_  
-**Purpose in course:** _Briefly describe how this dataset is used in teaching (e.g. simple regression, ANOVA, logistic regression, time series, etc.)._
+**Source:** Source - C. I. Bliss (1952) The Statistics of Bioassay. Academic Press. References - McNeil, D. R. (1977) Interactive Data Analysis. New York: Wiley.
+**Purpose in course:** Two-way ANOVA
 
 ---
 
@@ -38,3 +38,4 @@ df <- read.csv("ToothGrowth.csv", header = TRUE)
 import pandas as pd
 df = pd.read_csv("ToothGrowth.csv")
 ```
+
